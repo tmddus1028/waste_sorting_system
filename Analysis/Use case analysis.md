@@ -1,0 +1,224 @@
+# 2. Use Case Analysis
+
+## 2.1 Use Case Diagram
+<img width="642" height="488" alt="image" src="https://github.com/user-attachments/assets/c9624b58-8259-4f6b-8653-1d26adb583ad" />
+
+## 2.2 Use Case Description
+
+### Use Case #1 : Register User
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 시스템을 이용하기 위해 회원가입을 수행한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 사용자는 시스템에 접속 가능한 상태여야 한다. |
+| **Trigger** | 사용자가 메인 화면에서 회원가입을 선택한다. |
+| **Success Post Condition** | 사용자 계정이 정상적으로 생성된다. |
+| **Failed Post Condition** | 회원가입이 실패하고 입력 화면으로 돌아간다. |
+| **Main Success Scenario** | **S.** 사용자가 회원가입을 하려고 할 때 시작된다.<br>**1.** 사용자는 메인 화면에서 회원가입을 선택한다.<br>**2.** 시스템은 회원가입 입력 화면을 보여준다.<br>**3.** 사용자는 이름, 이메일, 비밀번호를 입력한다.<br>**4.** 시스템은 입력된 정보를 확인한다.<br>**5.** 시스템은 사용자 정보를 저장한다.<br>**6.** 시스템은 회원가입 성공 메시지를 출력한다.<br>**7.** 회원가입이 성공하면 끝난다. |
+| **Extension Scenarios** | **4a.** 입력 정보가 형식에 맞지 않는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 오류 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 회원가입 입력 화면으로 돌아간다.<br>**5a.** 이미 등록된 이메일인 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.1 시스템은 이미 등록된 정보라는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.2 회원가입 입력 화면으로 돌아간다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Low &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #2 : Login
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 시스템 기능을 이용하기 위해 로그인한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User, Administrator |
+| **Preconditions** | 사용자는 회원가입이 되어 있어야 한다. |
+| **Trigger** | 사용자가 로그인 메뉴를 선택한다. |
+| **Success Post Condition** | 저장된 회원 정보와 일치하면 로그인에 성공한다. |
+| **Failed Post Condition** | 저장된 회원 정보와 일치하지 않으면 로그인에 실패한다. |
+| **Main Success Scenario** | **S.** 사용자가 시스템에 로그인하려고 할 때 시작된다.<br>**1.** 사용자는 메인 화면에서 로그인을 선택한다.<br>**2.** 시스템은 로그인 화면을 보여준다.<br>**3.** 사용자는 아이디와 비밀번호를 입력한다.<br>**4.** 시스템은 저장된 회원 정보와 입력 정보를 비교한다.<br>**5.** 정보가 일치하면 시스템은 로그인을 허용한다.<br>**6.** 로그인에 성공하면 끝난다. |
+| **Extension Scenarios** | **4a.** 아이디 또는 비밀번호가 잘못된 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 로그인 실패 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 로그인 입력 화면으로 돌아간다.<br>**4b.** 필수 입력값이 누락된 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4b.1 시스템은 입력값 누락 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4b.2 로그인 입력 화면으로 돌아간다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Low &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #3 : Upload Waste Image
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 쓰레기 이미지를 업로드하여 분석을 요청한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 사용자는 시스템에 접속되어 있어야 한다. |
+| **Trigger** | 사용자가 이미지 업로드 기능을 선택한다. |
+| **Success Post Condition** | 이미지가 정상적으로 업로드되고 쓰레기 식별 단계로 전달된다. |
+| **Failed Post Condition** | 이미지 업로드가 실패하고 재업로드를 요청한다. |
+| **Main Success Scenario** | **S.** 사용자가 쓰레기 사진을 분석하려고 할 때 시작된다.<br>**1.** 사용자는 Upload Waste Image 기능을 선택한다.<br>**2.** 시스템은 이미지 업로드 화면을 보여준다.<br>**3.** 사용자는 쓰레기 사진을 촬영하거나 파일을 선택한다.<br>**4.** 시스템은 이미지 파일 형식을 확인한다.<br>**5.** 시스템은 이미지를 서버로 업로드한다.<br>**6.** 시스템은 Identify Waste Item 기능을 실행한다.<br>**7.** 이미지 업로드가 성공하면 끝난다. |
+| **Extension Scenarios** | **4a.** 파일 형식이 올바르지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 지원하지 않는 파일 형식이라는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 이미지 업로드 화면으로 돌아간다.<br>**5a.** 이미지 업로드가 실패한 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.1 시스템은 업로드 실패 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.2 Re-upload Wasting Image 기능을 실행하도록 한다. |
+| **Related Information** | **Performance:** ≤ 5 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #4 : Re-upload Wasting Image
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 이미지 분석이 실패했을 때 사용자가 이미지를 다시 업로드한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 기존 이미지 업로드 또는 분석이 실패한 상태여야 한다. |
+| **Trigger** | 시스템이 재업로드를 요청하거나 사용자가 재업로드를 선택한다. |
+| **Success Post Condition** | 새로운 이미지가 정상적으로 업로드된다. |
+| **Failed Post Condition** | 재업로드가 실패하고 다시 업로드 화면으로 돌아간다. |
+| **Main Success Scenario** | **S.** 이미지 업로드 또는 분석이 실패했을 때 시작된다.<br>**1.** 시스템은 이미지 재업로드 안내 메시지를 출력한다.<br>**2.** 사용자는 Re-upload Wasting Image 기능을 선택한다.<br>**3.** 시스템은 이미지 업로드 화면을 다시 보여준다.<br>**4.** 사용자는 새로운 이미지를 선택한다.<br>**5.** 시스템은 새로운 이미지를 업로드한다.<br>**6.** 시스템은 다시 Identify Waste Item 기능을 실행한다.<br>**7.** 재업로드가 성공하면 끝난다. |
+| **Extension Scenarios** | **4a.** 사용자가 이미지를 선택하지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 이미지 선택이 필요하다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 이미지 업로드 화면으로 돌아간다.<br>**5a.** 재업로드가 실패한 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.1 시스템은 재업로드 실패 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.2 다시 업로드를 요청한다. |
+| **Related Information** | **Performance:** ≤ 5 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #5 : Identify Waste Item
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 시스템이 업로드된 이미지를 분석하여 쓰레기 종류를 식별한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | System Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | System |
+| **Preconditions** | 사용자가 쓰레기 이미지를 업로드한 상태여야 한다. |
+| **Trigger** | Upload Waste Image 기능이 성공적으로 수행된다. |
+| **Success Post Condition** | 쓰레기 종류가 정상적으로 식별된다. |
+| **Failed Post Condition** | 쓰레기 종류를 식별하지 못하고 재업로드를 요청한다. |
+| **Main Success Scenario** | **S.** 업로드된 이미지가 분석 모듈로 전달될 때 시작된다.<br>**1.** 시스템은 업로드된 이미지를 분석 모듈에 전달한다.<br>**2.** 분석 모듈은 이미지 속 객체를 인식한다.<br>**3.** 시스템은 인식된 객체를 쓰레기 품목으로 분류한다.<br>**4.** 시스템은 식별된 쓰레기 종류를 저장한다.<br>**5.** 시스템은 식별 결과를 View Recycling Guide 기능으로 전달한다.<br>**6.** 쓰레기 식별이 완료되면 끝난다. |
+| **Extension Scenarios** | **2a.** 이미지가 흐리거나 객체가 명확하지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;2a.1 시스템은 식별 실패 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;2a.2 Re-upload Wasting Image 기능을 요청한다.<br>**3a.** 학습되지 않은 쓰레기 품목인 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.1 시스템은 식별할 수 없는 품목이라는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.2 사용자가 직접 검색할 수 있도록 안내한다. |
+| **Related Information** | **Performance:** ≤ 5 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #6 : View Recycling Guide
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 식별된 쓰레기의 분리배출 방법을 확인한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 쓰레기 품목이 식별되어 있어야 한다. |
+| **Trigger** | 사용자가 분리배출 가이드 보기를 선택한다. |
+| **Success Post Condition** | 사용자가 올바른 분리배출 방법을 확인한다. |
+| **Failed Post Condition** | 해당 품목의 가이드 정보를 확인하지 못한다. |
+| **Main Success Scenario** | **S.** 사용자가 분리배출 방법을 확인하려고 할 때 시작된다.<br>**1.** 사용자는 View Recycling Guide 기능을 선택한다.<br>**2.** 시스템은 Identify Waste Item 결과를 확인한다.<br>**3.** 시스템은 해당 쓰레기의 재활용 정보를 검색한다.<br>**4.** 시스템은 재활용 가능 여부를 표시한다.<br>**5.** 시스템은 올바른 분리배출 방법을 표시한다.<br>**6.** 사용자는 안내 내용을 확인한다.<br>**7.** 가이드 확인이 완료되면 끝난다. |
+| **Extension Scenarios** | **2a.** 식별된 쓰레기 정보가 없는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;2a.1 시스템은 식별 결과가 없다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;2a.2 이미지 업로드 또는 수동 검색을 안내한다.<br>**3a.** 해당 품목의 재활용 정보가 없는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.1 시스템은 정보가 없다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.2 Search Recycling Information 기능을 안내한다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #7 : View Detailed Guide
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 기본 분리배출 안내보다 더 자세한 정보를 확인한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 기본 분리배출 가이드가 표시된 상태여야 한다. |
+| **Trigger** | 사용자가 상세 가이드 보기를 선택한다. |
+| **Success Post Condition** | 사용자가 세부 분리배출 방법을 확인한다. |
+| **Failed Post Condition** | 상세 정보가 없으면 기본 가이드만 제공된다. |
+| **Main Success Scenario** | **S.** 사용자가 더 자세한 안내를 확인하려고 할 때 시작된다.<br>**1.** 사용자는 View Detailed Guide 기능을 선택한다.<br>**2.** 시스템은 해당 품목의 상세 정보를 검색한다.<br>**3.** 시스템은 세척 여부, 분리 방법, 배출 주의사항을 표시한다.<br>**4.** 사용자는 상세 가이드를 확인한다.<br>**5.** 상세 가이드 확인이 완료되면 끝난다. |
+| **Extension Scenarios** | **2a.** 상세 정보가 없는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;2a.1 시스템은 상세 정보가 없다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;2a.2 기본 분리배출 가이드 화면으로 돌아간다.<br>**3a.** 정보 불러오기에 실패한 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.1 시스템은 정보 조회 실패 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.2 다시 시도하도록 안내한다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #8 : Check Local Recycling Rules
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 지역별 분리배출 규칙을 확인한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 지역별 분리배출 규칙 데이터가 등록되어 있어야 한다. |
+| **Trigger** | 사용자가 지역별 규칙 확인 기능을 선택한다. |
+| **Success Post Condition** | 사용자가 선택한 지역의 분리배출 규칙을 확인한다. |
+| **Failed Post Condition** | 지역 규칙 정보를 확인하지 못한다. |
+| **Main Success Scenario** | **S.** 사용자가 지역별 분리배출 규칙을 확인하려고 할 때 시작된다.<br>**1.** 사용자는 Check Local Recycling Rules 기능을 선택한다.<br>**2.** 시스템은 지역 선택 또는 입력 화면을 보여준다.<br>**3.** 사용자는 자신의 지역을 선택하거나 입력한다.<br>**4.** 시스템은 해당 지역의 분리배출 규칙을 검색한다.<br>**5.** 시스템은 수거 요일, 배출 방법, 품목별 기준을 표시한다.<br>**6.** 사용자는 지역별 규칙을 확인한다.<br>**7.** 확인이 완료되면 끝난다. |
+| **Extension Scenarios** | **3a.** 사용자가 지역을 입력하지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.1 시스템은 지역 입력이 필요하다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.2 지역 입력 화면으로 돌아간다.<br>**4a.** 해당 지역의 정보가 없는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 지역 정보가 없다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 다른 지역을 입력하도록 안내한다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #9 : Search Recycling Information
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 특정 품목의 재활용 정보를 검색한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 재활용 정보 데이터가 시스템에 저장되어 있어야 한다. |
+| **Trigger** | 사용자가 재활용 정보 검색 기능을 선택한다. |
+| **Success Post Condition** | 사용자가 검색한 품목의 재활용 정보를 확인한다. |
+| **Failed Post Condition** | 검색 결과가 없거나 정보를 확인하지 못한다. |
+| **Main Success Scenario** | **S.** 사용자가 특정 품목의 재활용 정보를 찾으려고 할 때 시작된다.<br>**1.** 사용자는 Search Recycling Information 기능을 선택한다.<br>**2.** 시스템은 검색어 입력 화면을 보여준다.<br>**3.** 사용자는 검색할 품목명을 입력한다.<br>**4.** 시스템은 입력된 검색어와 관련된 정보를 검색한다.<br>**5.** 시스템은 검색 결과 목록을 표시한다.<br>**6.** 사용자는 원하는 정보를 선택하여 확인한다.<br>**7.** 검색 결과 확인이 완료되면 끝난다. |
+| **Extension Scenarios** | **3a.** 검색어를 입력하지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.1 시스템은 검색어 입력이 필요하다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.2 검색어 입력 화면으로 돌아간다.<br>**4a.** 검색 결과가 없는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 검색 결과가 없다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 다른 검색어 입력을 안내한다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #10 : Manage Recycling Data
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 관리자가 재활용 정보와 분리배출 데이터를 관리한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | Administrator Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | Administrator |
+| **Preconditions** | 관리자는 관리자 계정으로 로그인되어 있어야 한다. |
+| **Trigger** | 관리자가 데이터 관리 기능을 선택한다. |
+| **Success Post Condition** | 재활용 정보 또는 분리배출 데이터가 갱신된다. |
+| **Failed Post Condition** | 데이터 변경이 저장되지 않는다. |
+| **Main Success Scenario** | **S.** 관리자가 재활용 데이터를 관리하려고 할 때 시작된다.<br>**1.** 관리자는 Manage Recycling Data 기능을 선택한다.<br>**2.** 시스템은 재활용 데이터 목록을 표시한다.<br>**3.** 관리자는 추가, 수정, 삭제 중 하나를 선택한다.<br>**4.** 관리자는 변경할 데이터를 입력한다.<br>**5.** 시스템은 입력된 데이터 형식을 확인한다.<br>**6.** 시스템은 변경된 데이터를 저장한다.<br>**7.** 시스템은 데이터 관리 완료 메시지를 출력한다.<br>**8.** 데이터 관리가 완료되면 끝난다. |
+| **Extension Scenarios** | **5a.** 입력한 데이터 형식이 올바르지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.1 시스템은 오류 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;5a.2 데이터 입력 화면으로 돌아간다.<br>**6a.** 데이터 저장에 실패한 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;6a.1 시스템은 저장 실패 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;6a.2 다시 저장하도록 안내한다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Low &nbsp;\|&nbsp; **Due Date:** - |
+
+<br>
+
+### Use Case #11 : Manual Search Item
+| Item | Description |
+| :--- | :--- |
+| **Summary** | 사용자가 이미지 업로드 없이 품목명을 직접 입력하여 쓰레기 정보를 검색한다. |
+| **Scope** | Waste Recycling AI Guide System |
+| **Level** | User Level |
+| **Author** | 22412038 이승연 |
+| **Last Update** | 2026-04-28 |
+| **Status** | Analysis |
+| **Primary Actor** | User |
+| **Preconditions** | 사용자는 시스템에 접속 가능한 상태여야 한다. |
+| **Trigger** | 사용자가 수동 검색 기능을 선택한다. |
+| **Success Post Condition** | 사용자가 입력한 품목의 분리배출 정보를 확인한다. |
+| **Failed Post Condition** | 검색 결과가 없거나 정보를 확인하지 못한다. |
+| **Main Success Scenario** | **S.** 사용자가 직접 품목명을 검색하려고 할 때 시작된다.<br>**1.** 사용자는 Manual Search Item 기능을 선택한다.<br>**2.** 시스템은 품목명 입력 화면을 보여준다.<br>**3.** 사용자는 확인하고 싶은 쓰레기 품목명을 입력한다.<br>**4.** 시스템은 입력된 품목명을 기준으로 정보를 검색한다.<br>**5.** 시스템은 해당 품목의 재활용 가능 여부와 분리배출 방법을 표시한다.<br>**6.** 사용자는 검색 결과를 확인한다.<br>**7.** 수동 검색이 완료되면 끝난다. |
+| **Extension Scenarios** | **3a.** 품목명을 입력하지 않은 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.1 시스템은 품목명 입력이 필요하다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a.2 품목명 입력 화면으로 돌아간다.<br>**4a.** 해당 품목의 정보가 없는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.1 시스템은 검색 결과가 없다는 메시지를 출력한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a.2 다른 품목명을 입력하도록 안내한다. |
+| **Related Information** | **Performance:** ≤ 3 Seconds &nbsp;\|&nbsp; **Frequency:** Variable &nbsp;\|&nbsp; **Concurrency:** Medium &nbsp;\|&nbsp; **Due Date:** - |
