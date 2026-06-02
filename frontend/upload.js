@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             localStorage.setItem('wasteType', analysisResult.wasteType);
             localStorage.setItem('className', analysisResult.className);
             localStorage.setItem('uploadedImage', selectedImageData);
-            localStorage.setItsem('wasteAnalysisResult', JSON.stringify(analysisResult));
+            localStorage.setItem('wasteAnalysisResult', JSON.stringify(analysisResult));
             localStorage.setItem('wasteUploadedImage', selectedImageData);
             window.location.href = 'result.html';
         } catch (error) {
