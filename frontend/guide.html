@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분리배출 가이드 - Waste Sorting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container guide-container">
+        <a href="index.html" class="back-button" aria-label="Go back home">
+            <span class="back-button-icon"></span>
+        </a>
+
+        <main class="auth-card guide-card guide-list-card">
+            <h1>분리배출 가이드</h1>
+            <p class="guide-subtitle">품목을 선택하면 세척, 분리, 배출, 주의사항을 확인할 수 있습니다.</p>
+
+            <div id="guideList" class="guide-list"></div>
+
+            <div class="guide-list-actions">
+                <button class="result-outline-button" type="button" onclick="window.location.href='index.html'">뒤로가기</button>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="supabase-client.js?v=20260514-3"></script>
+    <script type="module" src="script.js?v=20260514-7"></script>
+    <script type="module" src="guide.js?v=20260517-1"></script>
+</body>
+</html>

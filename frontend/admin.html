@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지 - Waste Sorting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+    <main class="admin-shell">
+        <aside class="admin-sidebar">
+            <h1>관리자 페이지</h1>
+            <p class="admin-welcome" id="adminWelcome">관리자님 환영합니다</p>
+            <nav class="admin-menu" aria-label="관리자 메뉴">
+                <a href="#" class="admin-menu-item" data-admin-menu="dashboard">
+                    <span class="admin-menu-icon home-admin-icon"></span>
+                    대시보드
+                </a>
+                <a href="#" class="admin-menu-item is-active" data-admin-menu="items">
+                    <span class="admin-menu-icon box-admin-icon"></span>
+                    품목 관리
+                </a>
+                <a href="#" class="admin-menu-item" data-admin-menu="guide">
+                    <span class="admin-menu-icon guide-admin-icon"></span>
+                    재활용 가이드 관리
+                </a>
+                <a href="#" class="admin-menu-item" data-admin-menu="rules">
+                    <span class="admin-menu-icon rule-admin-icon"></span>
+                    지역별 api 보정 관리
+                </a>
+                <a href="#" class="admin-menu-item" id="adminLogoutButton" data-admin-menu="logout">
+                    <span class="admin-menu-icon logout-admin-icon"></span>
+                    로그아웃
+                </a>
+            </nav>
+        </aside>
+
+        <section class="admin-content">
+            <header class="admin-content-header">
+                <h2 id="adminPageTitle">품목 관리</h2>
+                <button class="admin-add-button" id="addButton" type="button">
+                    <span>+</span>
+                    새 품목 추가
+                </button>
+            </header>
+
+            <div id="adminView"></div>
+        </section>
+    </main>
+
+    <script type="module" src="supabase-client.js?v=20260514-3"></script>
+    <script type="module" src="script.js?v=20260514-7"></script>
+    <script type="module" src="admin.js?v=20260514-3"></script>
+</body>
+</html>
+
+

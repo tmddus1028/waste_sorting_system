@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분석 결과 - Waste Sorting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container result-container">
+        <a href="upload.html" class="back-button" aria-label="Go back to upload">
+            <span class="back-button-icon"></span>
+        </a>
+
+        <div class="auth-card result-card">
+            <h1 id="resultTitle">분석 결과</h1>
+
+            <section class="result-summary">
+                <div id="imagePreview" class="result-photo">
+                    <div class="result-photo-placeholder"></div>
+                </div>
+                <div class="result-info">
+                    <span class="result-label">식별된 쓰레기</span>
+                    <strong>페트병 (PET)</strong>
+                    <span class="recycle-badge">
+                        <span class="recycle-text">재활용 가능</span>
+                    </span>
+                </div>
+            </section>
+
+            <section class="sorting-card">
+                <div class="sorting-copy">
+                    <h2>분리배출 방법</h2>
+                    <p>내용물을 비우고, 라벨을 제거한 후 찌그러뜨려 뚜껑을 닫아 배출해주세요.</p>
+                </div>
+            </section>
+
+            <div class="result-actions">
+                <button class="result-outline-button" id="guideButton">상세 가이드 보기</button>
+                <button class="result-filled-button" id="anotherButton">다른 사진 분석하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="supabase-client.js?v=20260514-3"></script>
+    <script type="module" src="script.js?v=20260514-7"></script>
+    <script type="module" src="result.js?v=20260514-3"></script>
+</body>
+</html>

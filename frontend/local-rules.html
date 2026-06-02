@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역별 분리배출 규칙 - Waste Sorting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container local-container">
+        <a href="index.html" class="back-button" aria-label="Go back home">
+            <span class="back-button-icon"></span>
+        </a>
+
+        <div class="auth-card local-card">
+            <h1>지역별 분리배출 규칙</h1>
+
+            <div class="region-field">
+                <label for="sidoSelect">지역 선택</label>
+                <div class="region-select-group">
+                    <select id="sidoSelect">
+                        <option value="">시/도를 선택하세요</option>
+                    </select>
+                    <select id="sigunguSelect" disabled>
+                        <option value="">시/군/구를 선택하세요</option>
+                    </select>
+                </div>
+                <p class="api-status" id="apiStatus">공공데이터 API에서 정보를 불러오는 중입니다.</p>
+            </div>
+
+            <section class="collection-section">
+                <h2>수거 요일</h2>
+                <div class="collection-days" id="collectionDays"></div>
+            </section>
+
+            <section class="rule-detail">
+                <h2>배출 시간</h2>
+                <p id="disposalTime">저녁 8시 ~ 다음날 새벽 5시</p>
+            </section>
+
+            <section class="rule-detail">
+                <h2>배출 장소</h2>
+                <p id="disposalLocation">내 집·내 점포 앞, 지정된 장소에 배출</p>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="supabase-client.js?v=20260517-local-rules"></script>
+    <script type="module" src="local-rules.js?v=20260517-local-note"></script>
+</body>
+</html>

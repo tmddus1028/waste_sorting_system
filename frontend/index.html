@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Sorting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-panel">
+        <nav class="navbar">
+            <div class="logo logo-image">
+                <img src="images/what-removebg-preview.png" alt="이거뭐지" class="logo-wordmark-image">
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">홈</a>
+                <a href="guide.html">가이드</a>
+                <a href="local-rules.html">지역별 규칙</a>
+                <a href="search.html">재활용 정보검색</a>
+            </div>
+            <div class="nav-buttons" id="navAuthArea">
+                <button class="btn-nav-outline" onclick="window.location.href='login.html'">로그인</button>
+                <button class="btn-nav-filled" onclick="window.location.href='register.html'">회원가입</button>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>AI가 알려주는<br>쓰레기 분리배출 가이드</h1>
+                <div class="subtitle">사진 한 장으로 쉽고 정확하게</div>
+                <p>올바른 분리배출 방법을 확인하세요!</p>
+            </div>
+            <div class="hero-illustration">
+                <img src="images/main-removebg-preview.png" alt="재활용통 일러스트" class="hero-image">
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>주요 기능</h2>
+            <div class="feature-cards">
+                <div class="feature-card" onclick="handleUploadCardClick()">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.7l1.2-1.8A1.7 1.7 0 0 1 10.8 3.5h2.4a1.7 1.7 0 0 1 1.4.7L15.8 6h1.7A2.5 2.5 0 0 1 20 8.5v8A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-8Z"></path>
+                            <circle cx="12" cy="12.5" r="3.4"></circle>
+                        </svg>
+                    </div>
+                    <h3>사진 업로드</h3>
+                    <p>로그인 필요</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='search.html'">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="10.8" cy="10.8" r="5.8"></circle>
+                            <path d="m15.2 15.2 4.3 4.3"></path>
+                            <path d="M8.8 9.1c.8-.8 2.3-.8 3.1 0"></path>
+                        </svg>
+                    </div>
+                    <h3>재활용 정보 검색</h3>
+                    <p>로그인 없이 이용 가능</p>
+                </div>
+                <div class="feature-card" onclick="window.location.href='local-rules.html'">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21s6.5-5.4 6.5-11A6.5 6.5 0 0 0 5.5 10c0 5.6 6.5 11 6.5 11Z"></path>
+                            <circle cx="12" cy="10" r="2.4"></circle>
+                        </svg>
+                    </div>
+                    <h3>지역별 규칙 조회</h3>
+                    <p>로그인 없이 이용 가능</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="supabase-client.js?v=20260514-3"></script>
+    <script type="module" src="script.js?v=20260514-7"></script>
+</body>
+</html>
+
+

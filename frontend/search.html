@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재활용 정보 검색 - Waste Sorting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container search-container">
+        <a href="index.html" class="back-button" aria-label="Go back home">
+            <span class="back-button-icon"></span>
+        </a>
+
+        <div class="auth-card search-card">
+            <h1>재활용 정보 검색</h1>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="품목을 입력하세요">
+                <button id="searchButton" type="button">검색</button>
+            </div>
+
+            <section class="search-results-section">
+                <h2>검색 결과</h2>
+                <div id="searchResult" class="search-result-list"></div>
+            </section>
+        </div>
+    </div>
+    <script src="search.js?v=20260518-999"></script>
+</body>
+</html>
