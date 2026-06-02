@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', async function() {
         return;
     }
 
-    const API_BASE_URL = window.WASTE_API_BASE_URL
-        || localStorage.getItem('wasteApiBaseUrl')
-        || 'http://127.0.0.1:8000';
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+    || window.WASTE_API_BASE_URL    
+    || localStorage.getItem('wasteApiBaseUrl')
+    || 'http://127.0.0.1:8000';
 
     const uploadDropzone = document.getElementById('uploadDropzone');
     const fileInput = document.getElementById('fileInput');
@@ -217,7 +218,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             localStorage.setItem('wasteType', analysisResult.wasteType);
             localStorage.setItem('className', analysisResult.className);
             localStorage.setItem('uploadedImage', selectedImageData);
-            localStorage.setItem('wasteAnalysisResult', JSON.stringify(analysisResult));
+            localStorage.setItsem('wasteAnalysisResult', JSON.stringify(analysisResult));
             localStorage.setItem('wasteUploadedImage', selectedImageData);
             window.location.href = 'result.html';
         } catch (error) {
