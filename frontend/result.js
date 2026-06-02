@@ -16,15 +16,29 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     resultTitle.textContent = `${currentUser.name}님의 분석 결과`;
 
-    const history = window.AuthStorage.readUploadHistory(currentUser.email);
-    const latestRecord = history[0];
+    let latestRecord = null;
+    const storedAnalysisText = localStorage.getItem('wasteAnalysisResult');
+    const storedImage = localStorage.getItem('wasteUploadedImage')
+        || localStorage.getItem('uploadedImage');
+        if (storedAnalysisText) {
+            try {
+                latestRecord = {
+                    analysisResult: JSON.parse(storedAnalysisText),
+                    image: storedImage
+                };
+            } catch (error) {
+                    console.warn('저장된 분석 결과 파싱 실패:', error);
+                }
+            }
+            if (!latestRecord) {
+                const history = window.AuthStorage.readUploadHistory(currentUser.email);
+                latestRecord = history[0];
+            }
+            if (!latestRecord || !latestRecord.analysisResult) {
+                alert('최근 업로드 결과가 없습니다.');
+                return;
 
-    if (!latestRecord) {
-        alert('최근 업로드 결과가 없습니다.');
-        window.location.href = 'upload.html';
-        return;
-    }
-
+            }
     const analysis = latestRecord.analysisResult || {};
     const rawResult = analysis.rawPrediction || analysis;
     const modelClass = getModelClassFromResult(rawResult, analysis);
@@ -40,11 +54,19 @@ document.addEventListener('DOMContentLoaded', async function() {
     recycleBadge.classList.toggle('is-unavailable', displayData.status.includes('불가능'));
     sortingText.textContent = displayData.resultGuide;
 
-    const img = document.createElement('img');
-    img.src = latestRecord.image;
-    img.alt = '분석한 쓰레기 사진';
     imagePreview.innerHTML = '';
-    imagePreview.appendChild(img);
+
+
+    if (latestRecord.image) {
+        const img = document.createElement('img');
+        img.src = latestRecord.image;
+        img.alt = '분석한 쓰레기 사진';
+        imagePreview.appendChild(img);
+    } else {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'result-photo-placeholder';
+        imagePreview.appendChild(placeholder);
+    }
 
     guideButton.addEventListener('click', function() {
         window.location.href = `guide-detail.html?type=${encodeURIComponent(detailType)}`;
