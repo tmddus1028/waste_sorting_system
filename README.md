@@ -54,7 +54,8 @@ GitHub Issues 또는 README 편집 화면에 이미지를 드래그 앤 드롭�
 
 | AI 이미지 업로드 화면 |
 |---|
-| 이미지 삽입 위치 |
+| <img width="350" height="350" alt="알루미늄-캔-out8ddw1prsu66vkvy8lzwldoxwqczfjzdkx30piww" src="https://github.com/user-attachments/assets/096ae795-7c97-4d3f-85e1-623042471175" />
+ |
 
 ### 4.2 AI 분석 결과 화면
 
