@@ -54,14 +54,15 @@ GitHub Issues 또는 README 편집 화면에 이미지를 드래그 앤 드롭�
 
 | AI 이미지 업로드 화면 |
 |---|
-| <img width="350" height="350" alt="알루미늄-캔-out8ddw1prsu66vkvy8lzwldoxwqczfjzdkx30piww" src="https://github.com/user-attachments/assets/096ae795-7c97-4d3f-85e1-623042471175" />
- |
+| <img width="350" height="350" alt="알루미늄-캔-out8ddw1prsu66vkvy8lzwldoxwqczfjzdkx30piww" src="https://github.com/user-attachments/assets/096ae795-7c97-4d3f-85e1-623042471175" /><img width="350" height="350" alt="2Gt4Ph0WpKbAVLDtMA0VbhZPCbWN7xsrZB1n3IidxT0nVn3md3qknxvqmRDBXIKxPhnMKEtL3RIVPmGon27jgg" src="https://github.com/user-attachments/assets/21f9aa1d-57f7-4084-bdc6-e9a8cc190058" />
+
 
 ### 4.2 AI 분석 결과 화면
 
 | AI 분석 결과 화면 |
 |---|
-| 이미지 삽입 위치 |
+| <img width="350" height="350" alt="image" src="https://github.com/user-attachments/assets/8f10ff0d-3b0a-4eec-9905-9b907bdb4871" /><img width="350" height="350" alt="페트병결과" src="https://github.com/user-attachments/assets/d9b67f37-af3d-4a06-8b2b-fd454fdbb1a9" />
+
 
 ---
 
