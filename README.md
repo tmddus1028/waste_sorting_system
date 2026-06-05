@@ -14,17 +14,7 @@ AI 기반 쓰레기 분리배출 가이드 웹 애플리케이션
 
 ---
 
-## 2. 배포 주소
-
-- **Frontend:** https://waste-sorting-system.vercel.app/
-- **Backend API:** https://waste-sorting-api-cyky.onrender.com
-
-> ⚠️ 백엔드 서버는 Render 무료 플랜으로 배포되어 있습니다.  
-> 무료 플랜 특성상 서버가 일정 시간 사용되지 않으면 절전 상태로 전환될 수 있으며, 첫 요청 시 서버가 다시 활성화되는 과정에서 응답이 **1분~2분 정도 소요될 수 있습니다.**
-
----
-
-## 3. 주요 기능
+## 2. 주요 기능
 
 | 기능 | 설명 |
 |---|---|
@@ -37,7 +27,7 @@ AI 기반 쓰레기 분리배출 가이드 웹 애플리케이션
 
 ---
 
-## 4. AI 분류 기능 실행 화면
+## 3. AI 분류 기능 실행 화면
 
 아래 구역에는 AI 분류 기능을 실행한 화면 이미지를 직접 추가하면 됩니다.
 
@@ -50,14 +40,14 @@ GitHub README에 이미지를 넣는 방법 예시:
 GitHub Issues 또는 README 편집 화면에 이미지를 드래그 앤 드롭하면 이미지 URL을 얻을 수 있습니다.
 -->
 
-### 4.1 이미지 업로드 화면
+### 3.1 이미지 업로드 화면
 
 | AI 이미지 업로드 화면 |
 |---|
 | <img width="350" height="350" alt="알루미늄-캔-out8ddw1prsu66vkvy8lzwldoxwqczfjzdkx30piww" src="https://github.com/user-attachments/assets/096ae795-7c97-4d3f-85e1-623042471175" /><img width="350" height="350" alt="2Gt4Ph0WpKbAVLDtMA0VbhZPCbWN7xsrZB1n3IidxT0nVn3md3qknxvqmRDBXIKxPhnMKEtL3RIVPmGon27jgg" src="https://github.com/user-attachments/assets/21f9aa1d-57f7-4084-bdc6-e9a8cc190058" />
 
 
-### 4.2 AI 분석 결과 화면
+### 3.2 AI 분석 결과 화면
 
 | AI 분석 결과 화면 |
 |---|
@@ -66,7 +56,7 @@ GitHub Issues 또는 README 편집 화면에 이미지를 드래그 앤 드롭�
 
 ---
 
-## 5. AI 모델 관련 안내
+## 4. AI 모델 관련 안내
 
 본 프로젝트의 AI 분류 기능은 외부 상용 AI API를 단순 호출한 것이 아니라, 직접 학습한 이미지 분류 모델을 사용하여 구현하였습니다.
 
@@ -90,7 +80,7 @@ backend/model/best.pt
 
 ---
 
-## 6. 기술 스택
+## 5. 기술 스택
 
 ### Frontend
 
@@ -118,7 +108,7 @@ backend/model/best.pt
 
 ---
 
-## 7. 프로젝트 구조
+## 6. 프로젝트 구조
 
 ```text
 waste_sorting_system/
@@ -154,7 +144,7 @@ waste_sorting_system/
 
 ---
 
-## 8. 사용 시 유의사항
+## 7. 사용 시 유의사항
 
 - AI 분류 결과는 학습 데이터와 이미지 상태에 따라 달라질 수 있습니다.
 - 직접 학습한 모델을 사용했기 때문에 모든 쓰레기 이미지를 완벽하게 분류하지는 못합니다.
@@ -164,7 +154,7 @@ waste_sorting_system/
 
 ---
 
-## 9. 구현 의의
+## 8. 구현 의의
 
 본 프로젝트는 단순한 정보 제공 페이지가 아니라, 사용자가 직접 이미지를 업로드하면 AI 모델이 쓰레기 종류를 예측하고 그에 맞는 분리배출 정보를 제공하는 시스템입니다.
 
